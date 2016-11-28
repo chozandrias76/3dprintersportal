@@ -42,3 +42,24 @@ span {
     color: rgba(255, 255, 255, .85);
     font-size: 24px;
 }
+
+.thumb-row {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.thumb-row div {
+    float: left;
+    height: 250px;
+    width: 180px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.thumb-row img {
+    display: inline-block;
+    min-width: 100%;
+    min-height: 100%;
+    -ms-interpolation-mode: bicubic; /* Better image scaling in IE */
+}

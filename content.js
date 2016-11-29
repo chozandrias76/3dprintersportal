@@ -24,19 +24,20 @@ $(document).ready(function () {
             "Authorization": "Bearer 33c4a53f6f6244c03008cf5f40e6e109"
        },
         success: function(data){
-            var divs = $("#splashProducts div img");
-
+            //var divs = $("#splashProducts").find("#cover-image");
+            var divs = $('.cover-image');
             for(var i = 0; i < divs.length; i++){
-                drawPicture(i, data);
+                $(divs[i]).find(".text-overlay").text(data[i].name);
+                drawPicture(i, data, divs);
             }
         }
     });
     //console.log($("#splashProducts").toArray().each);
 });
 
-var drawPicture = function(divIndex, data){
-    var divs = $("#splashProducts div img");
-
+var drawPicture = function(divIndex, data, divsToChange){
+    var divs = divsToChange;
+    var index = divIndex;
     $.ajax({
         type: "GET",
         dataType: "json",
@@ -45,12 +46,7 @@ var drawPicture = function(divIndex, data){
             "Authorization": "Bearer 33c4a53f6f6244c03008cf5f40e6e109"
         },
         success: function(imageData){
-
-            //console.log(imageData.default_image.url);
-            $("#splashProducts div img")[divIndex].src=imageData.default_image.url;
-            //$("#splashProducts div img")[divIndex].width=180;
-            $("#splashProducts div img")[divIndex].height=250;
-            //console.log(imageData);
+            $(divsToChange[divIndex]).css('background-image', 'url(\'' + imageData.default_image.url + '\')');
         }
     });
 };

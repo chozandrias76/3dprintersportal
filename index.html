@@ -6,15 +6,26 @@
     <script src="https://use.fontawesome.com/626a98d2ae.js"></script>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <style>
-        .mySlides {display:none}
-        .w3-left, .w3-right, .w3-badge {cursor:pointer}
-        .w3-badge {height:13px;width:13px;padding:0}
+        .mySlides {
+            display: none
+        }
+
+        .w3-left, .w3-right, .w3-badge {
+            cursor: pointer
+        }
+
+        .w3-badge {
+            height: 13px;
+            width: 13px;
+            padding: 0
+        }
     </style>
 </head>
 <body>
 
 <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -27,7 +38,23 @@
     <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Store</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Categories</li>
+                <li><a href="#">3D Printing</a></li>
+                <li><a href="#">Art</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Gadgets</a></li>
+                <li><a href="#">Hobby</a></li>
+                <li><a href="#">Household</a></li>
+                <li><a href="#">Learning</a></li>
+                <li><a href="#">Models</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Toys &amp; Games</a></li>
+            </ul>
+        </li>
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -52,16 +79,20 @@
         var i;
         var x = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("demo");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" w3-white", "");
         }
-        x[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " w3-white";
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-white";
     }
 </script>
 
@@ -83,32 +114,89 @@
 
 <div class="container" id="splashProducts">
     <div class="row top-buffer thumb-row">
-        <!--<div class="col-md-2 col-md-offset-1">
-            <div id="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
-                <div id="overlay" width="180" height="250">
-            <span id="text-overlay">REGILO</span>
+        <div class="col-md-2 col-md-offset-1">
+            <div class="cover-image" style="background-image: url('http://placehold.it/165x250')" style="width='165'">
+                <div class="img-overlay" width="165" height="250">
+                    <span class="text-overlay">REGILO</span>
                 </div>
             </div>
-        </div>-->
-        <div class="col-md-2 col-md-offset-1" width="180" height="250"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250">
+                    <span class="text-overlay">REGILO</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
     </div>
     <div class="row top-buffer thumb-row">
-        <div class="col-md-2 col-md-offset-1"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
+        <div class="col-md-2 col-md-offset-1">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
     </div>
     <div class="row top-buffer thumb-row">
-        <div class="col-md-2 col-md-offset-1"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
-        <div class="col-md-2"><img src="http://placehold.it/180x250"></div>
+        <div class="col-md-2 col-md-offset-1">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="cover-image" style="background-image: url('http://placehold.it/180x250')" style="width='180'">
+                <div class="img-overlay" width="180" height="250"><span class="text-overlay">REGILO</span></div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -116,7 +204,7 @@
 <div class="navbar navbar-default">
     <div class="container">
         <p class="navbar-text pull-left">© 2014 - Site Built By Colin S.
-            <a href="http://tinyurl.com/tbvalid" target="_blank" >HTML 5 Validation</a>
+            <a href="http://tinyurl.com/tbvalid" target="_blank">HTML 5 Validation</a>
         </p>
     </div>
 

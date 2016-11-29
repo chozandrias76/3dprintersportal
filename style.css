@@ -23,24 +23,37 @@ span {
     vertical-align: middle;
     line-height: normal;
 }
-#cover-image {
-    width: 180px;
+
+.cover-image {
+    width: 165px;
     height: 250px;
     background-size: cover;
+    background-position: center;
     overflow: hidden;
     display: inline-block;
-
-}
-#cover-image:hover #overlay {
-    opacity: 1;
-    align-content: center;
 }
 
-#text-overlay {
+.img-overlay{
+    text-align: left;
+}
+
+.cover-image div:hover{
+    background-color: black;
+    opacity: 0.75;
+}
+
+.text-overlay {
     font-family: Helvetica;
     font-weight: 900;
     color: rgba(255, 255, 255, .85);
     font-size: 24px;
+    opacity:0;
+    width: 165px;
+    text-align: center;
+}
+
+.cover-image:hover .text-overlay{
+    opacity: 1;
 }
 
 .thumb-row {

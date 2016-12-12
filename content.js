@@ -1,13 +1,15 @@
 /**
  * Created by colin on 11/19/16.
  */
-module.exports = "";
-require("./node_modules/shopify-buy/lib/shopify.js");
-var jQuery = require("./node_modules/jquery/dist/jquery.js");
+//module.exports = "";
 
-require('./node_modules/jquery/dist/jquery.js');
+
+var jQuery = require("./node_modules/jquery/dist/jquery.js");
 const ShopifyBuy = require('./node_modules/shopify-buy/lib/shopify.js');
 
+//var fs = require('fs');
+
+//console.log(fs.readFileSync('shopifyData', 'utf8'));
 const client = ShopifyBuy.buildClient({
     apiKey: 'f433b939b151eb13939281a30b9db245',
     appId: '6',
@@ -16,7 +18,7 @@ const client = ShopifyBuy.buildClient({
 
 client.fetchAllProducts()
     .then(function(products){
-        console.log(products);
+        //console.log(products);
     })
     .catch(function(){
         console.log('Request failed')
@@ -43,31 +45,7 @@ $(document).ready(function () {
         }
     });
 
-   /* $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: "https://7753e3e9748faacdec91d7f0271a100d:9c72a5168f8e677d7ff30a31c522135a@3d-printers-portal.myshopify.com/admin/products.json",
-        headers: {
-            "Access-Control-Allow-Origin": "*"
-        },
-        success: function(data){
-            //var divs = $("#splashProducts").find("#cover-image");
-           console.log(data);
-        }
-    });*/
-
-    $.ajax({
-        url: 'https://7753e3e9748faacdec91d7f0271a100d:9c72a5168f8e677d7ff30a31c522135a@3d-printers-portal.myshopify.com/admin/products.json',
-        dataType: 'jsonp',
-        crossDomain: true,
-        jsonp: false,
-        success: function(data){
-            console.log(data);
-        }
-    });
-
-
-    $(".cover-image").on("click",function(){
+$(".cover-image").on("click", function() {
         var e = $(this).attr("id");
         client.fetchProduct(e)
             .then(function (product) {

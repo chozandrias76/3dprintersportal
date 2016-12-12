@@ -8,6 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "shopify-node-api": "^1.7.5"
   }
 }

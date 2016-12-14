@@ -1,55 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <script src="/node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/626a98d2ae.js"></script>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <style>
+        .navbar-fixed-left {
+            width: 140px;
+            position: fixed;
+            border-radius: 0;
+            height: 100%;
+        }
+
+        .navbar-fixed-left .navbar-nav>li {
+            float: none;
+            /* Cancel default li float: left */
+            width: 139px;
+        }
+
+        .navbar-fixed-left+.container {
+            padding-left: 160px;
+        }
+        /* On using dropdown menu (To right shift popuped) */
+
+        .navbar-fixed-left .navbar-nav>li>.dropdown-menu {
+            margin-top: -50px;
+            margin-left: 140px;
+        }
+
+        .top-buffer {
+            margin-top: 20px;
+        }
+
+        .product-img{
+          width: 292px;
+          height: 219px;
+        }
+
+        .product-container{
+          margin-top: 60px;
+        }
+    </style>
 </head>
+
 <body>
-<div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-            aria-expanded="false" aria-controls="navbar">
+    <!-- <div class="navbar-header navbar-fixed-top">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">3D Printers Portal</a>
-</div>
 
-<div id="navbar" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Categories</li>
-                <li><a href="#">3D Printing</a></li>
-                <li><a href="#">Art</a></li>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Gadgets</a></li>
-                <li><a href="#">Hobby</a></li>
-                <li><a href="#">Household</a></li>
-                <li><a href="#">Learning</a></li>
-                <li><a href="#">Models</a></li>
-                <li><a href="#">Tools</a></li>
-                <li><a href="#">Toys &amp; Games</a></li>
-            </ul>
-        </li>
+    </div> -->
 
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-        <li><a href="../shopping-cart/"><i class="fa fa-shopping-cart" aria-hidden="false"></i></a></li>
-        <li><a href="../login-page/">Login</a></li>
-        <li><a href="./"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-    </ul>
-</div>
+    <div id="navbar" class="navbar-collapse collapse navbar-fixed-top">
+        <ul class="nav navbar-nav">
+          <a class="navbar-brand" href="#">3D Printers Portal</a>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Categories</li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?3d-printing">3D Printing</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Extruders</a></li>
+                            <li><a href="#">Parts</a></li>
+                            <li><a href="#">Printers</a></li>
+                            <li><a href="#">Tests</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Art">Art</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">2D Art</a></li>
+                            <li><a href="#">Art Tools</a></li>
+                            <li>
+                                <a href="#"></a>Coins &amp; Badges</li>
+                            <li><a href="#">Interactive Art</a></li>
+                            <li><a href="#">Math Art</a></li>
+                            <li><a href="#">Scans &amp; Replicas</a></li>
+                            <li><a href="#">Sculptures</a></li>
+                            <li><a href="#">Signs &amp; Logos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Fashion">Fashion</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Bracelets</a></li>
+                            <li><a href="#">Costume</a></li>
+                            <li><a href="#">Earrings</a></li>
+                            <li><a href="#">Glasses</a></li>
+                            <li><a href="#">Jewelry</a></li>
+                            <li><a href="#">Keychains</a></li>
+                            <li><a href="#">Rings</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Gadgets">Gadgets</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Audio</a></li>
+                            <li><a href="#">Camera</a></li>
+                            <li><a href="#">Computer</a></li>
+                            <li><a href="#">Mobile Phone</a></li>
+                            <li><a href="#">Tablet</a></li>
+                            <li><a href="#">Video Games</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Hobby">Hobby</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">DIY</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">R/C Vehicles</a></li>
+                            <li><a href="#">Robotics</a></li>
+                            <li>
+                                <a href="#"></a>Sports &amp; Outdoors</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Household">Household</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Bathroom</a></li>
+                            <li><a href="#">Containers</a></li>
+                            <li><a href="#">Decor</a></li>
+                            <li><a href="#">Household Supplies</a></li>
+                            <li><a href="#">Kitchen &amp; Dining</a></li>
+                            <li><a href="#">Office</a></li>
+                            <li><a href="#">Organization</a></li>
+                            <li><a href="#">Outdoor &amp; Garden</a></li>
+                            <li><a href="#">Pets</a></li>
+                            <li><a href="#">Replacement Parts</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Learning">Learning</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Biology</a></li>
+                            <li><a href="#">Engineering</a></li>
+                            <li><a href="#">Math</a></li>
+                            <li><a href="#">Physics &amp; Astronomy</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Models">Models</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Animals</a></li>
+                            <li><a href="#">Building &amp; Structures</a></li>
+                            <li><a href="#">Creatures</a></li>
+                            <li><a href="#">Food &amp; Drink</a></li>
+                            <li><a href="#">Model Furniture</a></li>
+                            <li><a href="#">Model Robots</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Props</a></li>
+                            <li><a href="#">Vehicles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Tools">Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Hand Tools</a></li>
+                            <li><a href="#">Machine Tools</a></li>
+                            <li><a href="#">Parts</a></li>
+                            <li><a href="#">Tool Holders &amp; Boxes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="/products.html?Toys-Games">Toys &amp; Games</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">All</a></li>
+                            <li><a href="#">Chess</a></li>
+                            <li><a href="#">Construction Toys</a></li>
+                            <li><a href="#">Dice</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Mechanical Toys</a></li>
+                            <li><a href="#">PLaysets</a></li>
+                            <li><a href="#">Puzzles</a></li>
+                            <li><a href="#">Toys &amp; Game Accessories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
 
-<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
-<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="../shopping-cart/"><i class="fa fa-shopping-cart nav-icon"></i></a></li>
+            <li><a href="../login-page/">Login</a></li>
+            <li><a href="./"><i class="fa fa-search nav-icon" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-left" id="product-navbar">
+        <a class="navbar-brand" href="#">Brand</a>
+        <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Sub Menu1</a></li>
+                    <li><a href="#">Sub Menu2</a></li>
+                    <li><a href="#">Sub Menu3</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Sub Menu4</a></li>
+                    <li><a href="#">Sub Menu5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
+            <li><a href="#">Link4</a></li>
+            <li><a href="#">Link5</a></li>
+        </ul>
+    </div>
+    <div class="container" id="products-container">
+        <div class="row top-buffer">
+
+        </div>
+    </div>
+
+    <!-- <script type="text/javascript" src="../products-display.js" charset="utf-8"></script> -->
+    <script type="text/javascript" src="../bundle.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
 </body>
+
 </html>

@@ -3,7 +3,6 @@
  */
 //module.exports = "";
 
-
 var jQuery = require("./node_modules/jquery/dist/jquery.js");
 const ShopifyBuy = require('./node_modules/shopify-buy/lib/shopify.js');
 
@@ -25,7 +24,6 @@ client.fetchAllProducts()
     });
 
 $(document).ready(function () {
-   $("#carousel").css('min-height', $(window).height());
     $.ajax({
         type: "GET",
         dataType: "json",

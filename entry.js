@@ -3,5 +3,6 @@
  */
 require("./style.css");
 
-require("./content.js")
+require("./content.js");
+require("./products-display.js");
 //document.write(require("./content.js"));

@@ -1,18 +1,33 @@
-body {
-}
-.navbar-collapse.collapse{
+body {}
+
+.navbar-collapse.collapse {
     background-color: black;
 }
 
-.top-buffer { margin-top:15px; }
+.top-buffer {
+    margin-top: 15px;
+}
+
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #349a2d;
+}
+
+.navbar-brand {
+    color: rgb(20, 108, 68);
+}
+
+.nav-icon {
+    padding: 2.3px;
+}
 
 #overlay {
     background: rgba(0, 0, 0, .75);
     text-align: center;
-    width:180px;
-    height:250px;
-    line-height:250px;
-
+    width: 180px;
+    height: 250px;
+    line-height: 250px;
     opacity: 0;
     -webkit-transition: opacity .25s ease;
     -moz-transition: opacity .25s ease;
@@ -33,11 +48,11 @@ span {
     display: inline-block;
 }
 
-.img-overlay{
+.img-overlay {
     text-align: left;
 }
 
-.cover-image div:hover{
+.cover-image div:hover {
     background-color: black;
     opacity: 0.75;
 }
@@ -47,12 +62,12 @@ span {
     font-weight: 900;
     color: rgba(255, 255, 255, .85);
     font-size: 24px;
-    opacity:0;
+    opacity: 0;
     width: 165px;
     text-align: center;
 }
 
-.cover-image:hover .text-overlay{
+.cover-image:hover .text-overlay {
     opacity: 1;
 }
 
@@ -74,11 +89,9 @@ span {
     display: inline-block;
     min-width: 100%;
     min-height: 100%;
-    -ms-interpolation-mode: bicubic; /* Better image scaling in IE */
+    -ms-interpolation-mode: bicubic;
+    /* Better image scaling in IE */
 }
-
-
-
 
 .dropdown-submenu {
     position: relative;
